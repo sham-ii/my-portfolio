@@ -9,7 +9,6 @@
  *  Education / certifications / training: src/data/resume.js
  */
 import { FaGithub, FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa'
-import { FiMessageCircle, FiUsers, FiSearch, FiRefreshCw, FiBookOpen } from 'react-icons/fi'
 
 export const profile = {
   name: 'Trisha Mae Angel C. Sapeda',
@@ -47,51 +46,15 @@ export const navLinks = [
   { id: 'contact', label: 'Contact' },
 ]
 
+// Keep it short: two paragraphs and three highlights.
 export const about = {
-  lead: 'I’m an Information Systems student who enjoys turning ideas into working, user-friendly web applications.',
   paragraphs: [
-    'I’m currently taking up a Bachelor of Science in Information Systems at City College of Calapan. Alongside my studies, I’ve completed TESDA training in Java Programming (NC III) and Computer Systems Servicing (NC II), including 120 hours of supervised industry training at OLLOPA Corporation.',
+    'I’m an Information Systems student at City College of Calapan who enjoys turning ideas into working web applications. I build with HTML, CSS, JavaScript, PHP and MySQL, and I learn best by building real projects.',
+    'I’m looking for an On-the-Job Training opportunity where I can apply what I’ve learned, grow with experienced professionals, and contribute to a real team.',
   ],
-  points: [
-    {
-      title: 'Philosophy',
-      text: 'Pay attention to the details, keep things simple for the user, and never stop learning. I take responsibility for my work and value clear communication with the people I build for.',
-    },
-    {
-      title: 'What I enjoy building',
-      text: 'Web applications that solve everyday problems — from clean front-end pages in HTML, CSS and JavaScript to PHP and MySQL systems that manage real data.',
-    },
-    {
-      title: 'Where I’m heading',
-      text: 'I’m looking for an On-the-Job Training opportunity where I can apply what I’ve learned, grow under experienced professionals, and build practical workplace experience.',
-    },
-  ],
-  // Soft skills
   highlights: [
-    {
-      title: 'Communication',
-      text: 'Explaining ideas clearly and listening carefully to understand what is needed.',
-      icon: FiMessageCircle,
-    },
-    {
-      title: 'Team Collaboration',
-      text: 'Working well with others and sharing responsibility to reach common goals.',
-      icon: FiUsers,
-    },
-    {
-      title: 'Attention to Detail',
-      text: 'Careful, accurate work — from clean code to well-organised data.',
-      icon: FiSearch,
-    },
-    {
-      title: 'Adaptability',
-      text: 'Adjusting quickly to new tools, tasks and environments.',
-      icon: FiRefreshCw,
-    },
-    {
-      title: 'Willingness to Learn',
-      text: 'Always open to feedback, new technologies and better ways of working.',
-      icon: FiBookOpen,
-    },
+    { title: 'BS Information Systems', subtitle: 'City College of Calapan' },
+    { title: 'TESDA Certified', subtitle: 'Java NC III · CSS NC II' },
+    { title: 'OJT Ready', subtitle: '120 hrs industry training' },
   ],
 }
