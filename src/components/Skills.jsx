@@ -9,16 +9,16 @@ function SkillCard({ name, description, icon: Icon, level, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -6 }}
-      className="card group flex h-full flex-col p-6 transition-[border-color,box-shadow] duration-300 hover:border-primary/50 hover:shadow-glow-sm"
+      whileHover={{ y: -4 }}
+      className="card group flex h-full flex-col p-4 transition-[border-color,box-shadow] duration-300 hover:border-primary/50 hover:shadow-glow-sm"
     >
-      <div className="flex items-start gap-4">
-        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-line bg-ink-800 text-2xl text-white/85 transition-all duration-300 group-hover:border-primary/50 group-hover:text-primary-light group-hover:shadow-[0_0_22px_-4px_rgba(217,70,122,0.55)]">
+      <div className="flex items-start gap-3.5">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-line bg-ink-800 text-xl text-white/85 transition-all duration-300 group-hover:border-primary/50 group-hover:text-primary-light group-hover:shadow-[0_0_22px_-4px_rgba(217,70,122,0.55)]">
           <Icon aria-hidden="true" />
         </span>
         <div className="min-w-0">
-          <h3 className="text-lg font-semibold leading-tight text-white">{name}</h3>
-          <p className="mt-1.5 text-sm leading-relaxed text-muted">{description}</p>
+          <h3 className="text-base font-semibold leading-tight text-white">{name}</h3>
+          <p className="mt-1 text-[13px] leading-relaxed text-muted">{description}</p>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function Skills() {
           description="The languages, tools and technical skills I’ve built through my studies, TESDA training and industry training — and I keep adding to them."
         />
 
-        <ul className="grid auto-rows-fr gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+        <ul className="grid auto-rows-fr gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
           {skills.map((skill, i) => (
             <SkillCard key={skill.name} index={i} {...skill} />
           ))}

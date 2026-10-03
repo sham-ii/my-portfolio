@@ -30,16 +30,16 @@ export default function Contact() {
         />
 
         {/* Contact details */}
-        <ul className="grid auto-rows-fr gap-4 sm:gap-5 xl:grid-cols-3">
+        <ul className="grid auto-rows-fr gap-3 sm:gap-4 xl:grid-cols-3">
           {contactItems.map(({ icon: Icon, label, value, href }, i) => {
             const content = (
               <>
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-xl text-primary-light transition-colors duration-300 group-hover:border-primary/60">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-lg text-primary-light transition-colors duration-300 group-hover:border-primary/60">
                   <Icon aria-hidden="true" />
                 </span>
                 <div className="min-w-0">
-                  <p className="text-xs font-medium uppercase tracking-wider text-muted">{label}</p>
-                  <p className="mt-1 break-words text-[15px] font-medium text-white transition-colors duration-300 group-hover:text-primary-light">
+                  <p className="text-[11px] font-medium uppercase tracking-wider text-muted">{label}</p>
+                  <p className="mt-0.5 break-words text-sm font-medium text-white transition-colors duration-300 group-hover:text-primary-light">
                     {value}
                   </p>
                 </div>
@@ -59,12 +59,12 @@ export default function Contact() {
                 {href ? (
                   <a
                     href={href}
-                    className="card group flex h-full items-center gap-4 p-5 transition-[border-color,box-shadow] duration-300 hover:border-primary/50 hover:shadow-glow-sm sm:p-6"
+                    className="card group flex h-full items-center gap-3.5 p-4 transition-[border-color,box-shadow] duration-300 hover:border-primary/50 hover:shadow-glow-sm sm:px-5"
                   >
                     {content}
                   </a>
                 ) : (
-                  <div className="card group flex h-full items-center gap-4 p-5 sm:p-6">{content}</div>
+                  <div className="card group flex h-full items-center gap-3.5 p-4 sm:px-5">{content}</div>
                 )}
               </motion.li>
             )
@@ -72,11 +72,11 @@ export default function Contact() {
         </ul>
 
         {/* Socials + call to action */}
-        <Reveal delay={0.15} className="card mt-4 flex flex-col gap-6 p-6 sm:mt-5 sm:p-8 md:flex-row md:items-center md:justify-between">
+        <Reveal delay={0.15} className="card mt-3 flex flex-col gap-5 p-5 sm:mt-4 sm:p-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="font-display text-xl font-semibold text-white">Let's connect</p>
+            <p className="font-display text-lg font-semibold text-white">Let's connect</p>
             <p className="mt-1.5 text-sm text-muted">Find me on social media or send me an email anytime.</p>
-            <SocialLinks className="mt-5" />
+            <SocialLinks size="sm" className="mt-4" />
           </div>
           <motion.a
             href={`mailto:${profile.email}`}

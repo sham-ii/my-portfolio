@@ -20,7 +20,7 @@ export default function Projects() {
           description="Projects I’ve worked on — from our team capstone to practice builds — showing how I approach practical, user-friendly web applications."
         />
 
-        <ul className="grid auto-rows-fr gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid auto-rows-fr gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {projects.map((project, i) => (
             <li key={project.id}>
               <ProjectCard project={project} index={i} />
@@ -29,7 +29,7 @@ export default function Projects() {
         </ul>
 
         {github && (
-          <Reveal className="mt-12 flex justify-center">
+          <Reveal className="mt-8 flex justify-center">
             <a
               href={github.href}
               target="_blank"
