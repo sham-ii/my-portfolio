@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="100%" r="60%">
+      <stop offset="0" stop-color="#d9467a" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#d9467a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="catcher" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f08aaa"/>
+      <stop offset="1" stop-color="#b83263"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="#0d0d0d"/>
+  <rect width="800" height="500" fill="url(#glow)"/>
+  <!-- window bar -->
+  <rect x="0" y="0" width="800" height="34" fill="#151515"/>
+  <circle cx="22" cy="17" r="5" fill="#3a3a3a"/><circle cx="40" cy="17" r="5" fill="#3a3a3a"/><circle cx="58" cy="17" r="5" fill="#3a3a3a"/>
+  <rect x="300" y="10" width="200" height="14" rx="7" fill="#222"/>
+  <!-- HUD -->
+  <rect x="32" y="118" width="150" height="40" rx="12" fill="#141414" stroke="#2a2a2a"/>
+  <text x="50" y="144" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#8a8a8a">SCORE</text>
+  <text x="112" y="145" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#f0f0f0">120</text>
+  <rect x="618" y="52" width="150" height="40" rx="12" fill="#141414" stroke="#2a2a2a"/>
+  <text x="636" y="78" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#8a8a8a">BEST</text>
+  <text x="690" y="79" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#f08aaa">340</text>
+  <!-- question -->
+  <rect x="280" y="50" width="240" height="56" rx="16" fill="#171214" stroke="#d9467a" stroke-opacity=".7"/>
+  <text x="400" y="88" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#ffffff">7 × 6 = ?</text>
+  <!-- falling answers -->
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <circle cx="150" cy="240" r="32" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+    <text x="150" y="250" font-size="26" fill="#cfcfcf">36</text>
+    <circle cx="520" cy="300" r="32" fill="#1d1418" stroke="#f08aaa" stroke-width="2.5"/>
+    <text x="520" y="310" font-size="26" fill="#f6c1d2">42</text>
+    <circle cx="330" cy="190" r="32" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+    <text x="330" y="200" font-size="26" fill="#cfcfcf">48</text>
+    <circle cx="630" cy="250" r="32" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+    <text x="630" y="260" font-size="26" fill="#cfcfcf">13</text>
+  </g>
+  <!-- motion trails -->
+  <g stroke-linecap="round" stroke-width="3">
+    <line x1="150" y1="180" x2="150" y2="198" stroke="#333"/>
+    <line x1="520" y1="236" x2="520" y2="258" stroke="#d9467a" stroke-opacity=".5"/>
+    <line x1="330" y1="132" x2="330" y2="148" stroke="#333"/>
+    <line x1="630" y1="190" x2="630" y2="208" stroke="#333"/>
+  </g>
+  <!-- catcher -->
+  <path d="M468 410 h110 l-12 40 h-86 z" fill="url(#catcher)"/>
+  <rect x="460" y="402" width="126" height="12" rx="6" fill="#f6c1d2"/>
+  <g fill="#8a8a8a">
+    <path d="M428 432 l-14 -9 v18 z"/>
+    <path d="M618 432 l14 -9 v18 z"/>
+  </g>
+  <!-- ground -->
+  <rect x="0" y="466" width="800" height="34" fill="#121212"/>
+  <line x1="0" y1="466" x2="800" y2="466" stroke="#2a2a2a"/>
+  <g fill="#3a3a3a"><rect x="32" y="478" width="70" height="8" rx="4"/><rect x="118" y="478" width="50" height="8" rx="4"/></g>
+  <rect x="690" y="474" width="78" height="16" rx="8" fill="#d9467a" fill-opacity=".25"/>
+</svg>

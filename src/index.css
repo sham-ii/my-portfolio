@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-ink-950 font-sans text-white antialiased;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    background: rgba(217, 70, 122, 0.35);
+    color: #fff;
+  }
+
+  /* Consistent, clearly visible keyboard focus */
+  :focus-visible {
+    outline: 2px solid #f08aaa;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* Leave room for the floating navbar when jumping to a section */
+  section[id] {
+    scroll-margin-top: 1rem;
+  }
+
+  /* Scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2e2e2e #0d0d0d;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 999px;
+    border: 2px solid #0d0d0d;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b83263;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Components                                                          */
+/* ------------------------------------------------------------------ */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply relative py-24 sm:py-28 lg:py-32;
+  }
+
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300;
+  }
+
+  /* Deep pink, white text (AA contrast), soft glow — not neon */
+  .btn-primary {
+    @apply btn bg-gradient-to-br from-primary to-primary-dark text-white shadow-glow-sm hover:from-[#cf3f71] hover:to-[#a92c5a];
+  }
+
+  .btn-outline {
+    @apply btn border border-line bg-white/[0.02] text-white hover:border-primary/60 hover:text-primary-soft;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-ink-850/80 shadow-card;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary-light;
+  }
+
+  .glass {
+    @apply border border-white/[0.08] bg-ink-900/60 backdrop-blur-xl;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Utilities                                                           */
+/* ------------------------------------------------------------------ */
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(120deg, #f6c1d2 0%, #f08aaa 35%, #d9467a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Faint technical grid, faded out toward the edges */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
+  }
+
+  /* Hero portrait glow: deep pink → muted pink → transparent */
+  .bg-portrait-glow {
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(217, 70, 122, 0.62) 0%,
+      rgba(184, 50, 99, 0.36) 28%,
+      rgba(184, 50, 99, 0.12) 48%,
+      transparent 68%
+    );
+  }
+
+  .sr-only-focusable:not(:focus):not(:focus-within) {
+    @apply sr-only;
+  }
+}
