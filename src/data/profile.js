@@ -49,11 +49,11 @@ export const navLinks = [
 // Keep it short: two paragraphs and three highlights.
 export const about = {
   paragraphs: [
-    'I’m an Information Systems student at City College of Calapan who enjoys turning ideas into working web applications. I build with HTML, CSS, JavaScript, PHP and MySQL, and I learn best by building real projects.',
+    'I’m a 4th-year Information Systems student at City College of Calapan who enjoys turning ideas into working web applications. I build with HTML, CSS, JavaScript, PHP and MySQL, and I learn best by building real projects.',
     'I’m looking for an On-the-Job Training opportunity where I can apply what I’ve learned, grow with experienced professionals, and contribute to a real team.',
   ],
   highlights: [
-    { title: 'BS Information Systems', subtitle: 'City College of Calapan' },
+    { title: '4th Year', subtitle: 'BS Information Systems' },
     { title: 'TESDA Certified', subtitle: 'Java NC III · CSS NC II' },
     { title: 'OJT Ready', subtitle: '120 hrs industry training' },
   ],
