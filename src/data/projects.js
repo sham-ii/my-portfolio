@@ -2,9 +2,6 @@
  * ============================================================
  *  PROJECTS — edit, add or remove projects here
  * ============================================================
- *  ⚠ "Personal Portfolio" still has placeholder links (liveUrl '#' and a
- *    your-username GitHub URL) — update them once this site is published.
- *
  *  Each object renders one <ProjectCard />. To add a project:
  *    1. Put a screenshot in src/assets/images/projects/
  *       (jpg, png, webp or svg — 16:10 ratio looks best)
@@ -35,11 +32,11 @@ export const projects = [
     id: 'personal-portfolio',
     title: 'Personal Portfolio',
     description:
-      'This website — a responsive portfolio with smooth section navigation, subtle animations and an accessible contact form.',
+      'This website — a responsive portfolio with smooth section navigation, subtle animations and a built-in certificate viewer.',
     image: portfolioImg,
     tags: ['HTML', 'CSS', 'JavaScript', 'React'],
-    liveUrl: '#',
-    githubUrl: 'https://github.com/your-username/portfolio',
+    liveUrl: 'https://sham-ii.github.io/my-portfolio/',
+    githubUrl: 'https://github.com/sham-ii/my-portfolio',
   },
   {
     id: 'checkinn-hotel-management',

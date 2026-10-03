@@ -34,6 +34,14 @@ Drop a square photo (800×800 px or larger) into `src/assets/images/` named
 `profile.jpg` (or `.jpeg`, `.png`, `.webp`). No code changes needed — the
 placeholder is used only while no photo exists.
 
+## Deployment
+
+The site is hosted on **GitHub Pages**: https://sham-ii.github.io/my-portfolio/
+
+Every push to `main` rebuilds and republishes it automatically
+(`.github/workflows/deploy.yml`) — the update is live about a minute later.
+Progress is visible in the repository's **Actions** tab.
+
 ## Project structure
 
 ```
